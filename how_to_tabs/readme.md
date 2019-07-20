@@ -29,6 +29,8 @@ To try the code on your computer:
 5. Copy the source repository to your computer: `git clone https://github.com/jamesshore/how_to_tabs.git`
 6. Change to the project directory: `cd how_to_tabs`
 
+To run the build, type `node build.js`.
+
 This episode doesn't have any code you can run yet.
 
 
