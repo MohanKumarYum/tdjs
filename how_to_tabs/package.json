@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "jake": "^8.1.1"
+  }
 }
