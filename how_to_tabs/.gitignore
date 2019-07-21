@@ -2,3 +2,5 @@
 
 # Webstorm
 .idea/
+# Webpack DEmo - Guide.
+webpack-demo/*
