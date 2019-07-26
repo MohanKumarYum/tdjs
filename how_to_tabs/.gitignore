@@ -1,6 +1,6 @@
 # Ignore the below files & folders
 
+# .bin directories
+node_modules/**/.bin/
 # Webstorm
 .idea/
-# Webpack DEmo - Guide.
-webpack-demo/*
