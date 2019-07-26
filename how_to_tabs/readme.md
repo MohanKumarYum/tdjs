@@ -26,13 +26,12 @@ To try the code on your computer:
 2. Install [Git](http://git-scm.com/downloads).
 3. Open a command prompt.
 4. Change to the directory that will contain the project. In your command prompt, type: `cd <directory>` (where `<directory>` is the directory that will contain the project).
-5. Copy the source repository to your computer: `git clone https://github.com/jamesshore/how_to_tabs.git`
-6. Change to the project directory: `cd how_to_tabs`
+5. Copy the source repository to your computer: `git clone https://github.com/MohanKumarYum/tdjs.git`
+6. Change to the project directory: `cd tdjs\how_to_tabs`
 
 To run the build:
 
-1. Install jake `npm install jake -g`.
-2. Run `Jake`.
+1. Run `Jake`.
 
 This episode doesn't have any code you can run yet.
 
