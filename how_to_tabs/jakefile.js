@@ -9,7 +9,7 @@
 
 
     desc("Default build");
-    task("default", ["node version", "npm version"], function () {
+    task("default", ["node version", "npm version", "lint"], function () {
 
         console.log("\n\nBUILD OK");
     });
@@ -49,13 +49,13 @@
     desc("Linting JavaScript code");
     task("lint", function () {
 
-        console.log("Linting JavaScript: .");
+        process.stdout.write("Linting JavaScript: "); // So the dot from jshint is added to the same line as "Linting JavaScript" output.
 
         jshint.checkFiles({
-            files: "jakefile.js",
+            files: "Jakefile.js",
             options: {},
             globals: {}
-        }, complete, fail)
+        }, complete, fail);
 
     }, { async: true });
 
