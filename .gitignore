@@ -1,4 +1,5 @@
 # Ignore the below files & folders
 
 # Webpack Demo - Guide.
-./webpack-demo/
+webpack-demo/
+how_to_tabs_videos/
