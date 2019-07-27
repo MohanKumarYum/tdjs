@@ -49,7 +49,7 @@
     desc("Linting JavaScript code");
     task("lint", function () {
 
-        process.stdout.write("Linting JavaScript: "); // So the dot from jshint is added to the same line as "Linting JavaScript" output.
+        process.stdout.write("Linting JavaScript: "); // This command is used ,so that the dot from jshint is added to the same line as "Linting JavaScript" output.
 
         jshint.checkFiles({
             files: "Jakefile.js",
