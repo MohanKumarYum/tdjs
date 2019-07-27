@@ -1,11 +1,11 @@
-(function() {
+(function () {
     "use strict";
 
     var packageJson = require("./package.json");
 
     var semver = require("semver");
 
-    var exec = require('child_process');
+    var exec = require("child_process");
 
 
     desc("Default build");
@@ -30,17 +30,17 @@
         }
     });
 
-    desc('Check npm version');
-    task('npm version', function () {
-        console.log('Checking npm version: .');
+    desc("Check npm version");
+    task("npm version", function () {
+        console.log("Checking npm version: .");
 
         var expectedVersion = packageJson.engines.npm;
 
-        var exec = require('child_process').exec;
-        exec('npm -v', function (error, stdout, stderr) {
+        var exec = require("child_process").exec;
+        exec("npm -v", function (error, stdout, stderr) {
             var actualVersion = stdout;
             if (semver.neq(expectedVersion, actualVersion)) {
-                fail('Incorrect npm version: expected ' + expectedVersion + ', but was ' + actualVersion);
+                fail("Incorrect npm version: expected " + expectedVersion + ", but was " + actualVersion);
             }
             complete();
         });
