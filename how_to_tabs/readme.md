@@ -31,7 +31,7 @@ To try the code on your computer:
 
 To run the build:
 
-1. Run `Jake`.
+1. Run `./jake.sh` (Mac/Unix) or `jake` (Windows).
 
 This episode doesn't have any code you can run yet.
 
