@@ -1,4 +1,4 @@
-(function () {
+(function() {
     "use strict";
 
     var packageJson = require("./package.json");
@@ -16,7 +16,7 @@
 
 
     desc("Check Node Version");
-    task("Node Version", function () {
+    task("node version", function () {
 
         console.log("Checking node version: .");
 
@@ -28,7 +28,7 @@
             var errMsg = "Incorrect Node Version : " + "actual node version : " + actualNodeVersion + " , but expected node version: " + expectedNodeVersion + " [http://nodejs.org/dist/v0.12.4/]";
             fail(errMsg);
         }
-    })
+    });
 
     desc('Check npm version');
     task('npm version', function () {
@@ -46,4 +46,4 @@
         });
     }, { async: true });
 
-})();
+}());
