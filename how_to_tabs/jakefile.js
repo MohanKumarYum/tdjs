@@ -46,4 +46,13 @@
         });
     }, { async: true });
 
+    desc("Linting JavaScript code");
+    task("lint", function () {
+        
+        console.log("Linting JavaScript: .");
+        jake.exec("node node_modules\\jshint\\bin\\jshint jakefile.js", { interactive: true }, complete);
+
+    }, { async: true });
+
+
 }());
