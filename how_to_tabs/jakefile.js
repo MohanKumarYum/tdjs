@@ -5,7 +5,7 @@
 
     var semver = require("semver");
 
-    var exec = require("child_process");
+    var jshint = require("simplebuild-jshint");
 
 
     desc("Default build");
@@ -48,9 +48,14 @@
 
     desc("Linting JavaScript code");
     task("lint", function () {
-        
+
         console.log("Linting JavaScript: .");
-        jake.exec("node node_modules\\jshint\\bin\\jshint jakefile.js", { interactive: true }, complete);
+
+        jshint.checkFiles({
+            files: "jakefile.js",
+            options: {},
+            globals: {}
+        }, complete, fail)
 
     }, { async: true });
 
