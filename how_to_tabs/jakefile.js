@@ -9,7 +9,7 @@
 
 
     desc("Default build");
-    task("default", ["Node Version", "npm version"], function () {
+    task("default", ["node version", "npm version"], function () {
 
         console.log("\n\nBUILD OK");
     });
