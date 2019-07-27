@@ -11,8 +11,8 @@
   "license": "ISC",
   "private": true,
   "engines": {
-    "node": "0.12.4",
-    "npm" : "2.10.1"
+    "node": "12.6.0",
+    "npm" : "6.9.0"
   },
   "devDependencies": {
     "jake": "^8.1.1",
