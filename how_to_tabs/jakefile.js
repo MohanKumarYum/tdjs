@@ -1,10 +1,9 @@
+/* globals desc: false, task: false, require: false, fail: false, complete: false */
 (function () {
     "use strict";
 
     var packageJson = require("./package.json");
-
     var semver = require("semver");
-
     var jshint = require("simplebuild-jshint");
 
 
@@ -53,7 +52,25 @@
 
         jshint.checkFiles({
             files: "Jakefile.js",
-            options: {},
+            options: {
+                bitwise: true,
+                curly: true,
+                eqeqeq: true,
+                forin: true,
+                freeze: true,
+                futurehostile: true,
+                latedef: "nofunc",
+                leanswitch: true,
+                noarg: true,
+                nocomma: true,
+                nonbsp: true,
+                nonew: true,
+                strict: true,
+                undef: true,
+                node: true,
+                browser: true,
+                noreturnawait: true,
+                },
             globals: {}
         }, complete, fail);
 
