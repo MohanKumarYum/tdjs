@@ -1,23 +1,9 @@
 (function () {
     "use strict";
 
-    var a = 3, b = 4;
-    var expected = 7;
-    var actual = add(a, b);
+    var assert = require("chai").assert;
 
-    assertEqual(actual, expected);
-
-    function assertEqual(actual, expected) {
-
-        try {
-            if (actual !== expected) {
-                throw new Error("Expected " + expected + " , but was " + actual);
-            }
-
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    assert.equal(7, add(3, 4),"Expected " + 7 + " , but was " + add(3, 4));
 
     function add(a, b) {
 
