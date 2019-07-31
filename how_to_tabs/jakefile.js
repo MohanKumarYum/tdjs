@@ -9,7 +9,7 @@
     //**** General-purpose tasks 
 
     desc("Default build");
-    task("default", ["node version", "npm version", "lint", "run"], function () {
+    task("default", ["node version", "npm version", "lint"], function () {
 
         console.log("\n\nBUILD OK");
     });
@@ -60,7 +60,7 @@
         process.stdout.write("Linting JavaScript: "); // This command is used ,so that the dot from jshint is added to the same line as "Linting JavaScript" output.
 
         jshint.checkFiles({
-            files: "Jakefile.js",
+            files: [ "Jakefile.js", "src/**/*.js"],
             options: {
                 bitwise: true,
                 curly: true,
