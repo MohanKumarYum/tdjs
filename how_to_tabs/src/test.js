@@ -1,14 +1,19 @@
-(function() {
+(function () {
     "use strict";
 
     var chai = require("chai");
     var assert = chai.assert;
 
-    // basic addition
-    assert.equal(7, add(3, 4));
+    describe("Addition", function () {
 
-    // IEEE 754 floating point
-    assert.equal(0.30000000000000004, add(0.1,0.2));
+        it("adds positive numbers", function () {
+            assert.equal(add(3, 4),7);
+        });
+
+        it("uses IEEE 754 floating point", function () {
+            assert.equal(add(0.1, 0.2),0.30000000000000004);
+        })
+    });
 
     function add(a, b) {
         return a + b;
