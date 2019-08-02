@@ -7,8 +7,13 @@
 
     //**** General-purpose tasks 
 
+    desc("Start the Karma server (run this first)");
+    task("karma", function () {
+        console.log("Starting Karma server:");
+    }, {async: true});
+
     desc("Default build");
-    task("default", ["node version", "npm version", "lint"], function () {
+    task("default", ["node version", "npm version", "lint", "karma"], function () {
 
         console.log("\n\nBUILD OK");
     });
