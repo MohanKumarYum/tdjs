@@ -1,4 +1,3 @@
-/* globals jake: false, desc: false, task: false, require: false, fail: false, complete: false */
 (function () {
     "use strict";
 
@@ -60,30 +59,54 @@
         process.stdout.write("Linting JavaScript: "); // This command is used ,so that the dot from jshint is added to the same line as "Linting JavaScript" output.
 
         jshint.checkFiles({
-            files: [ "Jakefile.js", "src/**/*.js"],
-            options: {
-                bitwise: true,
-                curly: true,
-                eqeqeq: true,
-                forin: true,
-                freeze: true,
-                futurehostile: true,
-                latedef: "nofunc",
-                leanswitch: true,
-                noarg: true,
-                nocomma: true,
-                nonbsp: true,
-                nonew: true,
-                strict: true,
-                undef: true,
-                node: true,
-                browser: true,
-                noreturnawait: true,
-            },
-            globals: {}
+            files: ["Jakefile.js", "src/**/*.js"],
+            options: lintOptions(),
+            globals: globalOptions(),
         }, complete, fail);
 
     }, { async: true });
 
+    // linting options
+    function lintOptions() {
+
+        return {
+            bitwise: true,
+            curly: true,
+            eqeqeq: true,
+            forin: true,
+            freeze: true,
+            futurehostile: true,
+            latedef: "nofunc",
+            leanswitch: true,
+            noarg: true,
+            nocomma: true,
+            nonbsp: true,
+            nonew: true,
+            strict: true,
+            undef: true,
+            node: true,
+            browser: true,
+            noreturnawait: true,
+        };
+
+    }
+
+    // global variables for lint exclusion
+    function globalOptions() {
+        return {
+            describe: false,
+            it: false,
+            before: false,
+            after: false,
+            beforeEach: false,
+            afterEach: false,
+            jake: false,
+            desc: false,
+            task: false,
+            require: false,
+            fail: false,
+            complete: false
+        };
+    }
 
 }());
