@@ -4,12 +4,16 @@
     var packageJson = require("./package.json");
     var semver = require("semver");
     var jshint = require("simplebuild-jshint");
+    var karma = require("simplebuild-karma");
 
     //**** General-purpose tasks 
 
     desc("Start the Karma server (run this first)");
     task("karma", function () {
         console.log("Starting Karma server:");
+        karma.start({
+            configFile: "karma.conf.js"
+        }, complete, fail);
     }, {async: true});
 
     desc("Default build");
