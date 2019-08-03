@@ -85,7 +85,8 @@
                 "Opera 62.0.3331 (Windows 10.0.0)",
                 "Opera 64.0.3388 (Windows 10.0.0)",
                 "Firefox 68.0.0 (Windows 10.0.0)"
-            ]
+            ],
+            strict : !process.env.loose
         }, complete, fail);
     }, { async: true });
 
